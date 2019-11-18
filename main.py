@@ -16,6 +16,10 @@ def escalonar(strref, qtdfrm, qtdpag):
 			page_fault.append(True)
 		else:
 			page_fault.append(False)
+			end = fila_prc.remove(page)
+			fila_prc.appendleft(page)
+			endf = fila_frm.remove(page)
+			fila_frm.appendleft(page)
 		tabela_prc.append(list(fila_prc))
 	return tabela_prc, page_fault
 
